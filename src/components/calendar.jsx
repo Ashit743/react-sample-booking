@@ -10,105 +10,13 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogActions from '@mui/material/DialogActions';
 import Button from '@mui/material/Button';
 import './Calendar.css'; // Import CSS file for custom styling
+import mockPatientEvents from '../mock/patientsData.json'
 
-const initialBookedSlots = [
-  { 
-    title: 'Booked', 
-    start: '2024-02-15T10:00:00', 
-    end: '2024-02-15T10:30:00', 
-    doctor: 'Dr. Arun', 
-    patientName: 'Pratam H',
-    patientPhoneNumber: '111-222-3333'
-  },
-  { 
-    title: 'Booked', 
-    start: '2024-02-16T10:30:00', 
-    end: '2024-02-16T11:00:00', 
-    doctor: 'Dr. Rakesh', 
-    patientName: 'Pratam H',
-    patientPhoneNumber: '444-555-6666'
-  },
-  { 
-    title: 'Booked', 
-    start: '2024-02-17T10:00:00', 
-    end: '2024-02-17T10:30:00', 
-    doctor: 'Dr. Krishna', 
-    patientName: 'Pratam H',
-    patientPhoneNumber: '777-888-9999'
-  },
-  // Add 10 more booked slots with different doctor names
-  { 
-    title: 'Booked', 
-    start: '2024-02-19T10:00:00', 
-    end: '2024-02-19T10:30:00', 
-    doctor: 'Dr. Smith', 
-    patientName: 'Pratam H',
-    patientPhoneNumber: '111-222-3333'
-  },
-  { 
-    title: 'Booked', 
-    start: '2024-02-21T10:30:00', 
-    end: '2024-02-21T11:00:00', 
-    doctor: 'Dr. Patel', 
-    patientName: 'Pratam H',
-    patientPhoneNumber: '444-555-6666'
-  },
-  { 
-    title: 'Booked', 
-    start: '2024-02-23T10:00:00', 
-    end: '2024-02-23T10:30:00', 
-    doctor: 'Dr. Khan', 
-    patientName: 'Pratam H',
-    patientPhoneNumber: '777-888-9999'
-  },
-  { 
-    title: 'Booked', 
-    start: '2024-02-25T10:00:00', 
-    end: '2024-02-25T10:30:00', 
-    doctor: 'Dr. Gupta', 
-    patientName: 'Pratam H',
-    patientPhoneNumber: '111-222-3333'
-  },
-  { 
-    title: 'Booked', 
-    start: '2024-02-27T10:30:00', 
-    end: '2024-02-27T11:00:00', 
-    doctor: 'Dr. Sharma', 
-    patientName: 'Pratam H',
-    patientPhoneNumber: '444-555-6666'
-  },
-  { 
-    title: 'Booked', 
-    start: '2024-02-29T10:00:00', 
-    end: '2024-02-29T10:30:00', 
-    doctor: 'Dr. Singh', 
-    patientName: 'Pratam H',
-    patientPhoneNumber: '777-888-9999'
-  },
-  { 
-    title: 'Booked', 
-    start: '2024-03-02T10:00:00', 
-    end: '2024-03-02T10:30:00', 
-    doctor: 'Dr. Mishra', 
-    patientName: 'Pratam H',
-    patientPhoneNumber: '111-222-3333'
-  },
-  { 
-    title: 'Booked', 
-    start: '2024-03-04T10:30:00', 
-    end: '2024-03-04T11:00:00', 
-    doctor: 'Dr. Joshi', 
-    patientName: 'Pratam H',
-    patientPhoneNumber: '444-555-6666'
-  }
-];
-
-  
+const events = mockPatientEvents
 
 function MonthlyCalendar() {
   const [open, setOpen] = useState(false);
   const [eventInfo, setEventInfo] = useState(null);
-  const [bookedSlots, setBookedSlots] = useState(initialBookedSlots);
 
 
 
@@ -132,7 +40,7 @@ function MonthlyCalendar() {
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,timeGridDay'
           }}
-          events={bookedSlots}
+          events={events}
           eventClick={handleEventClick}
           selectable ={true}
           aspectRatio={2.2}

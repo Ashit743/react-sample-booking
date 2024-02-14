@@ -135,6 +135,7 @@ function MonthlyCalendar() {
           events={bookedSlots}
           eventClick={handleEventClick}
           selectable ={true}
+          aspectRatio={2.2}
 
         //   editable={true} // Make events editable
         //   droppable={true} // Make events droppable

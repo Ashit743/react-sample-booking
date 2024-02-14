@@ -1,11 +1,13 @@
 import MonthlyCalendar from "./components/Calendar"
-
+import "./App.css"
 
 function App() {
 
   return (
    <div>
-      <MonthlyCalendar></MonthlyCalendar>
+      <div className="calendar">
+        <MonthlyCalendar></MonthlyCalendar>
+      </div>
    </div>
   )
 }

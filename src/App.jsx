@@ -1,4 +1,4 @@
-import MonthlyCalendar from "./components/calendar"
+import MonthlyCalendar from "./components/Calendar"
 
 
 function App() {

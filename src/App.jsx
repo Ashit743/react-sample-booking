@@ -1,5 +1,6 @@
-import MonthlyCalendar from "./components/Calendar"
+import MonthlyCalendar from "./components/calendar/Calendar"
 import "./App.css"
+import DoctorComponent from "./components/manualAppointment/availableDoctors"
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
    <div>
       <div className="calendar">
         <MonthlyCalendar></MonthlyCalendar>
+        <DoctorComponent></DoctorComponent>
       </div>
    </div>
   )
